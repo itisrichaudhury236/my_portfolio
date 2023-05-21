@@ -38,25 +38,25 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas itaque eveniet molestiae facere recusandae, quaerat officia consequatur nulla esse ipsam corrupti repellendus totam. Vel quis nostrum qui corporis magnam animi!</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                     
                 </div>
-                <div class="tab-content">
+                <div class="tab-content active-tab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Design Web/App interface</li>
                         <li><span>WebApplication</span><br>Design Web/App Developement</li>
                         <li><span>App Developement</span><br>Design Web/App interface</li>
                     </ul>
                 </div>
-                <div class="tab-content active-tab">
+                <div class="tab-content" id="experience" >
                     <ul>
                         <li><span>UI/UX</span><br>Design Web/App interface</li>
                         <li><span>WebApplication</span><br>Design Web/App Developement</li>
                         <li><span>App Developement</span><br>Design Web/App interface</li>
                     </ul>
                 </div>
-                <div class="tab-content">
+                <div class="tab-content" id="education">
                     <ul>
                         <li><span>UI/UX</span><br>Design Web/App interface</li>
                         <li><span>WebApplication</span><br>Design Web/App Developement</li>
@@ -67,5 +67,44 @@
             </div>
          </div>  
     </div>
+    <!-----------------------services-------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"> My services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deleniti reprehenderit ab velit veniam accusantium doloribus cum, saepe suscipit atque praesentium inventore nulla exercitationem sint reiciendis. Numquam odit excepturi molestias, obcaecati voluptate optio iure, molestiae temporibus sequi quia asperiores vitae quidem! Aspernatur aperiam tempore placeat cum qui iusto, mollitia modi.</p>
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deleniti reprehenderit ab velit veniam accusantium doloribus cum, saepe suscipit atque praesentium inventore nulla exercitationem sint reiciendis. Numquam odit excepturi molestias, obcaecati voluptate optio iure, molestiae temporibus sequi quia asperiores vitae quidem! Aspernatur aperiam tempore placeat cum qui iusto, mollitia modi.</p>
+            </div>
+            <div>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deleniti reprehenderit ab velit veniam accusantium doloribus cum, saepe suscipit atque praesentium inventore nulla exercitationem sint reiciendis. Numquam odit excepturi molestias, obcaecati voluptate optio iure, molestiae temporibus sequi quia asperiores vitae quidem! Aspernatur aperiam tempore placeat cum qui iusto, mollitia modi.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent  of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+       
+    </script>
 </body>
 </html>
